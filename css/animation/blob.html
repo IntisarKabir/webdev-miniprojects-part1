@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .profile {
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "image name"
+    "image description";
+  padding: var(--size-400);
+}
+.profile__name {
+  grid-area: name;
+}
+
+.profile__description {
+  grid-area: description;
+}
+
+
+.profile__image {
+  /*   border-top-left-radius: 1rem 4rem;  */
+  border-radius: 56% 44% 73% 27% / 45% 68% 32% 55%;
+  transition: border-radius 500ms ease-in-out;
+  grid-area: image;
+}
+
+.profile__image:hover{
+    border-radius: 20% 80% 17% 83% / 34% 36% 64% 66%  ;
+}
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="myself.jpg" alt="" height="400" width="400" class="profile__image">
+        <p class="profile__name fs-700 fw-bold">Intisar Kabir</p>
+        <p class="profile__description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irlit esse cillum la pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      </div>
+</body>
+</html>
